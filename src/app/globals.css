@@ -50,8 +50,42 @@ body {
   opacity: 0.05;
 }
 
+
 .glass-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+/* Global button, link, and card focus/hover/active states for accessibility and consistency */
+button, .btn, a, .card, .group {
+  outline: none;
+  transition-property: background, color, border, box-shadow, transform, filter;
+  transition-duration: 180ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
+
+button:focus-visible, .btn:focus-visible, a:focus-visible, .card:focus-visible, .group:focus-visible {
+  box-shadow: 0 0 0 3px #ffe17b, 0 2px 8px 0 rgba(0,0,0,0.04);
+  outline: none;
+  z-index: 2;
+}
+
+button:active, .btn:active, a:active, .card:active, .group:active {
+  filter: brightness(0.95) saturate(1.1);
+  transform: scale(0.98);
+}
+
+button:hover:not(:disabled), .btn:hover:not(:disabled), a:hover, .card:hover, .group:hover {
+  filter: brightness(1.03) saturate(1.1);
+}
+
+/* Animated appearance for sections */
+section, .animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

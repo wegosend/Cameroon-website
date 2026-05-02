@@ -16,8 +16,15 @@ export default function HeroSection() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
         <div className="max-w-2xl">
-          <h1 className="font-display-xl text-display-xl text-white mb-6">Gateway to the <br />Heart of Africa</h1>
-          <p className="font-body-lg text-body-lg text-white/90 mb-8">Everything you need to know for your journey to the Republic of Cameroon, from travel logistics to strategic investment opportunities.</p>
+          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl text-white mb-6 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:200ms]">
+            Gateway to the <br />Heart of Africa
+          </h1>
+          <p className="font-medium text-lg md:text-xl text-white/90 mb-8 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:400ms]">
+            Everything you need to know for your journey to the Republic of Cameroon, from travel logistics to strategic investment opportunities.
+          </p>
+          <a href="#practical-info" className="inline-block px-8 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg transition-all duration-200 opacity-0 translate-y-8 animate-fade-in-up [animation-delay:600ms]">
+            Discover the country
+          </a>
         </div>
       </div>
     </section>
